@@ -1,0 +1,22 @@
+name: Deploy_ando-server
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: build
+        uses: |
+              compose up -d --build
+      - name: healthcheck container
+        run: |
+          sleep 6
+          docker ps | grep foss
+          docker logs foss
