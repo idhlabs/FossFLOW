@@ -4,8 +4,6 @@ services:
     pull_policy: always
     container_name: fossflow
     restart: unless-stopped
-    ports:
-      - 80:80
     environment:
       - NODE_ENV=production
       - ENABLE_SERVER_STORAGE=${ENABLE_SERVER_STORAGE:-true}
