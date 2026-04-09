@@ -21,4 +21,4 @@ jobs:
         run: |
           sleep 6
           docker ps | grep fossflow
-          docker logs foss
+          docker logs fossflow
