@@ -20,5 +20,5 @@ jobs:
       - name: healthcheck container
         run: |
           sleep 6
-          docker ps | grep foss
+          docker ps | grep fossflow
           docker logs foss
